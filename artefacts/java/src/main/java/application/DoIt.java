@@ -37,13 +37,13 @@ public class DoIt extends HttpServlet {
                         throws ServletException, IOException {
                 System.out.println(request.getParameter("name"));
                 System.out.println(request.getParameter("emailId"));
-				System.out.println(request.getParameter("text"));
+		System.out.println(request.getParameter("text"));
 
                 URL myurl = null;
-                myurl = new URL("https://us-south.functions.cloud.ibm.com/api/v1/namespaces/ernese%40sg.ibm.com_cloudnative-dev/actions/Bluemix_testdb_theKey/create-document?blocking=true");
+                myurl = new URL("url from  - Endpoints of Bluemix_testdb_theKey/create-document");
 
-                String username = "74476abb-312a-4226-9d7c-f1f0ae645255";
-                String password = "2UuYA49AudKNkuRpSJWDYsBAiZ84jl8q4vYuLcZU1hzyQwoNTK33tPQMnp0cDbPj";
+                String username = "username - from running 'ibmcloud cf service-key testdb myapp'";
+                String password = "password - from running 'ibmcloud cf service-key testdb myapp'";
                 String encoded = Base64.getEncoder()
                                 .encodeToString((username + ":" + password).getBytes(StandardCharsets.UTF_8)); // Java 8
                 //System.out.println(encoded);
