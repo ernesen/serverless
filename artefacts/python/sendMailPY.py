@@ -10,7 +10,7 @@ def main (args):
    from_ = 'ernese@sg.ibm.com'
    headers = {
        'Content-Type': 'application/json',
-       'Authorization': 'Bearer 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',
+       'Authorization': 'Bearer <SendGrid\'s key>',
    }
    payload = {
        "personalizations": [{"to": [{"email": to_}]}],
